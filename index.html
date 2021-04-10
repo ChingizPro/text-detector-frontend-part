@@ -44,11 +44,16 @@
             .box__inner {
                 border: 2px solid teal;
                 border-radius: 4px;
+                height: 500px;
+                -ms-align-items: center;
+                align-items: center;
             }
 
             .box__img {
-                width: 550px;
-                height: 500px;
+                display: block;
+                max-width: 100%;
+                max-height: 100%;
+                margin: auto;
             }
 
             .box__textarea {
@@ -131,8 +136,9 @@
                 }
 
                 .box__img {
-                    width: 100%;
-                    height: 100%;
+                    display: block;
+                    max-width: 100%;
+                    max-height: 100%;
                 }
             }
 
@@ -140,11 +146,19 @@
                 .box {
                     height: 500px;
                 }
+
+                .box__inner {
+                    height: 450px;
+                }
             }
 
             @media (max-width: 1000px) {
                 .box {
                     height: 450px;
+                }
+
+                .box__inner {
+                    height: 400px;
                 }
             }
 
@@ -157,6 +171,10 @@
                 .box {
                     width: 550px;
                     height: 550px;
+                }
+
+                .box__inner {
+                    height: 500px;
                 }
             }
 
@@ -173,6 +191,10 @@
                     height: 470px;
                 }
 
+                .box__inner {
+                    height: 420px;
+                }
+
                 .labels {
                     padding-left: 20px;
                     padding-right: 20px;
@@ -184,6 +206,10 @@
                     height: 450px;
                 }
 
+                .box__inner {
+                    height: 400px;
+                }
+
                 .file-label,
                 .button {
                     width: 130px;
@@ -193,6 +219,10 @@
             @media (max-width: 500px) {
                 .box {
                     width: 100%;
+                    height: 400px;
+                }
+
+                .box__inner {
                     height: 400px;
                 }
 
@@ -217,6 +247,10 @@
                 .box {
                     height: 350px;
                 }
+
+                .box__inner {
+                    height: 300px;
+                }
             }
 
             @media (max-width: 350px) {
@@ -228,6 +262,10 @@
                 .box {
                     height: 300px;
                 }
+
+                .box__inner {
+                    height: 250px;
+                }
             }
         </style>
     </head>
@@ -237,7 +275,9 @@
             <div class="boxes">
                 <div class="box">
                     <p class="img__text"><b class="text">Uploaded image</b></p>
-                    <img id="output" class="box__img box__inner" alt="uploaded image" />
+                    <div class="box__inner">
+                        <img id="output"  class="box__img" alt="uploaded image" />
+                    </div>
                 </div>
                 <div class="box">
                     <p class="img__text"><b class="text">Detected Text</b></p>
